@@ -1,21 +1,18 @@
 <?php
 
 // Boot the app
-require_once __DIR__ . '/boot.php';
+require_once __DIR__ . '/Autoloader.php';
 
-// Include the template
-require_once __DIR__ . '/templates/Template1/Template1.php';
-
-// Use the template
-use Templates\Template1;
-
+use PhpOffice\PhpPresentation\PhpPresentation;
 use PhpOffice\PhpPresentation\IOFactory;
 
+// Create new presentation object
+$obj = new PhpPresentation();
 
-$obj = new Template1();
 
-// Get active slide
-$slide = $obj->createFirstSlide();
+// BEGIN: Slide 01 -------------------------------------------------------------
+// Get active slide - once object created a slide will be created
+$slide = $obj->getActiveSlide();
 
 // Create a shape (text)
 $shape = $slide->createRichTextShape()
@@ -27,9 +24,11 @@ $textRun = $shape->createTextRun('Thank you for using PHPPresentation!');
 $textRun->getFont()->setBold(true)
                    ->setSize(60);
 
+// END: Slide 01
 
+// BEGIN: Slide 02 -------------------------------------------------------------
 // Create slide
-$slide = $obj->createNextSlide();
+$slide = $obj->createSlide();
 
 // Create a shape (text)
 $shape = $slide->createRichTextShape()
@@ -40,6 +39,8 @@ $shape = $slide->createRichTextShape()
 $textRun = $shape->createTextRun('Thank you for using PHPPresentation!');
 $textRun->getFont()->setBold(true)
                    ->setSize(60);
+
+// END: Slide 02
 
 $oWriterPPTX = IOFactory::createWriter($obj, 'PowerPoint2007');
 $oWriterPPTX->save(__DIR__ . "/sample.pptx");
