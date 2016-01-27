@@ -1,0 +1,42 @@
+{
+  "properties" : {
+    "Creator" : "Rage",
+    "LastModifiedBy" : "Rage Team",
+    "Title" : "Dynamic PPTX Generation",
+    "Subject" : "Generate Dynamic PPTX",
+    "Description" : "This PPTX is generated Dynamically.",
+    "Keywords" : "office openxml",
+    "Category" : "Sample Category"
+  },
+  "content" : {
+    "title" : "Masdar City, Abu Dhabi (2008-2015)",
+    "client" : "Clients: Masdar",
+    "subheading" : "Services:",
+    "contentTitle" : "Project Description",
+    "contentDescription" : "Occupying 6 million sq m of land, the project is a landmark development initiated by the Abu Dhabi Government. Envisaged to be the first carbon neutral city, the project will be cultivated as a global centre of excellence for research and education, as a commercial hub and most importantly, as a model for sustainable development for Abu Dhabi."
+  },
+  "flag" : {
+    "name" : "Flag",
+    "description" : "Flag",
+    "path" : "./resources/slide/image13.png"
+  },
+  "list" : {
+      "0": "Strategic Consulting",
+      "1": "Valuation Advisory",
+      "2": "Leasing",
+      "3": "Project & Development Services",
+      "4": "Investment Transactions"
+  },
+  "iconPath" : {
+      "0": "./resources/slide/icon1.png",
+      "1": "./resources/slide/icon2.png",
+      "2": "./resources/slide/icon3.png",
+      "3": "./resources/slide/icon4.png",
+      "4": "./resources/slide/icon5.png"
+  },
+  "mainImage" : {
+    "path" : "./resources/slide/image12.jpg",
+    "name" : "Main",
+    "description" : "Main"
+  }
+}

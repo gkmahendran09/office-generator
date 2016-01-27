@@ -1,0 +1,42 @@
+{
+  "properties" : {
+    "Creator" : "Rage",
+    "LastModifiedBy" : "Rage Team",
+    "Title" : "Dynamic PPTX Generation",
+    "Subject" : "Generate Dynamic PPTX",
+    "Description" : "This PPTX is generated Dynamically.",
+    "Keywords" : "office openxml",
+    "Category" : "Sample Category"
+  },
+  "content" : {
+    "title" : "Chennai, India (2010-2016)",
+    "client" : "Clients: Rage",
+    "subheading" : "Services:",
+    "contentTitle" : "About Rage",
+    "contentDescription" : "Rage is a digital marketing agency based in India. We help clients meet their business goals through a host of web-based services."
+  },
+  "flag" : {
+    "name" : "Flag",
+    "description" : "Flag",
+    "path" : "./resources/slide/image13.png"
+  },
+  "list" : {
+      "0": "E-commerce applications",
+      "1": "Website design and development",
+      "2": "Online marketing",
+      "3": "Site and server management",
+      "4": "Search marketing"
+  },
+  "iconPath" : {
+      "0": "./resources/slide/icon1.png",
+      "1": "./resources/slide/icon2.png",
+      "2": "./resources/slide/icon3.png",
+      "3": "./resources/slide/icon4.png",
+      "4": "./resources/slide/icon5.png"
+  },
+  "mainImage" : {
+    "path" : "./resources/slide/image12.jpg",
+    "name" : "Main",
+    "description" : "Main"
+  }
+}

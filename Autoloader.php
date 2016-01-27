@@ -13,3 +13,6 @@ require_once __DIR__ . '/libs/PhpOffice/PhpPresentation/Autoloader.php';
 // Load files for Word
 require_once __DIR__ . '/libs/PhpOffice/PhpWord/Autoloader.php';
 \PhpOffice\PhpWord\Autoloader::register();
+
+// include template
+require_once __DIR__ . '/Templates/TemplateInterface.php';
