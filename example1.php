@@ -6,28 +6,40 @@ require_once __DIR__ . '/boot.php';
 // Include the template
 require_once __DIR__ . '/templates/Template1/Template1.php';
 
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Style\Alignment;
-use PhpOffice\PhpPresentation\Style\Color;
+// Use the template
+use Templates\Template1;
+
 use PhpOffice\PhpPresentation\IOFactory;
 
 
-$objPHPPresentation = new PhpPresentation();
+$obj = new Template1();
 
-// Create slide
-$currentSlide = $objPHPPresentation->getActiveSlide();
+// Get active slide
+$slide = $obj->createFirstSlide();
 
 // Create a shape (text)
-$shape = $currentSlide->createRichTextShape()
+$shape = $slide->createRichTextShape()
       ->setHeight(300)
       ->setWidth(600)
       ->setOffsetX(170)
       ->setOffsetY(180);
-$shape->getActiveParagraph()->getAlignment()->setHorizontal( Alignment::HORIZONTAL_CENTER );
 $textRun = $shape->createTextRun('Thank you for using PHPPresentation!');
 $textRun->getFont()->setBold(true)
-                   ->setSize(60)
-                   ->setColor( new Color( 'FFE06B20' ) );
+                   ->setSize(60);
 
-$oWriterPPTX = IOFactory::createWriter($objPHPPresentation, 'PowerPoint2007');
+
+// Create slide
+$slide = $obj->createNextSlide();
+
+// Create a shape (text)
+$shape = $slide->createRichTextShape()
+      ->setHeight(300)
+      ->setWidth(600)
+      ->setOffsetX(170)
+      ->setOffsetY(180);
+$textRun = $shape->createTextRun('Thank you for using PHPPresentation!');
+$textRun->getFont()->setBold(true)
+                   ->setSize(60);
+
+$oWriterPPTX = IOFactory::createWriter($obj, 'PowerPoint2007');
 $oWriterPPTX->save(__DIR__ . "/sample.pptx");
