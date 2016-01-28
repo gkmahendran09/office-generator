@@ -1,0 +1,15 @@
+{
+    "require": {
+        "illuminate/database": "4.1.0",
+        "phpoffice/phppresentation": "dev-master",
+        "phpoffice/phpword": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "models"
+        ],
+        "psr-4": {
+            "Templates\\": "Templates/"
+        }
+    }
+}
