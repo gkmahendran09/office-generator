@@ -35,10 +35,10 @@ class Template1 extends PhpPresentation implements \Templates\TemplateInterface
 
     private function createCell($cell, $text)
     {
-      $cell->getBorders()->getBottom()->setColor(new Color(F2F2F2));
-      $cell->getBorders()->getTop()->setColor(new Color(F2F2F2));
-      $cell->getBorders()->getLeft()->setColor(new Color(F2F2F2));
-      $cell->getBorders()->getRight()->setColor(new Color(F2F2F2));
+      $cell->getBorders()->getBottom()->setColor(new Color('F2F2F2'));
+      $cell->getBorders()->getTop()->setColor(new Color('F2F2F2'));
+      $cell->getBorders()->getLeft()->setColor(new Color('F2F2F2'));
+      $cell->getBorders()->getRight()->setColor(new Color('F2F2F2'));
       $cell->createTextRun($text)->getFont()->setSize(14)->setColor( new Color( '000000' ) );
     }
 
